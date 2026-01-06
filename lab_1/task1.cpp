@@ -69,7 +69,7 @@ void replaceItemsArray(double arr[], size_t n, double x) {
 
 };
 
-int task1() {
+void task1() {
 	// размер массива равен 20 (по заданию) 
 	const size_t N = 20;
 
@@ -91,5 +91,4 @@ int task1() {
 	replaceItemsArray(a, N, input);
 	printArray(a, N);
 
-	return 0;
 }

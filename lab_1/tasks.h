@@ -4,8 +4,8 @@
 
 #include <iostream>
 
-int task1();
-int task2();
-//int task3();
+void task1();
+void task2();
+void task3();
 
 #endif // TASKS_H
