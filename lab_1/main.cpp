@@ -3,85 +3,13 @@
 #include <iostream>
 #include <cstring>
 #include <string>
+#include "tasks.h"
 
-double processArray(double arr[], size_t n) {
-	// заполнение массива случ. числами 
-	for (size_t i = 0; i < n; ++i)
-	{
-		arr[i] = (double)(rand() % 91) - 20; //случ. число в диапазоне  -20.0 до 70.0
-	}
-
-	double max = 0.0;
-	// поиск максимального значения по модулю
-	for (size_t i = 0; i < n; ++i)
-	{
-		if (fabs(arr[i]) > max) {
-			max = fabs(arr[i]);
-		}
-	}
-
-	//нормализация массива
-	for (size_t i = 0; i < n; ++i)
-	{
-		arr[i] /= max;
-	}
-
-	return max;
-};
-
-
-void printArray(double arr[], size_t n) {
-	std::string result = "[ ";
-
-	for (size_t i = 0; i < n; ++i)
-	{
-		result += std::to_string(arr[i]);
-		result += " ";
-	}
-	result += " ]";
-	std::cout << result << std::endl;
-}
-
-//Сформировать выходной вещественный массив, в котором все элементы, стоящие до 
-//позиции максимального элемента включительно, повторяют элементы входного
-//массива, а остальные равны x.
-void replaceItemsArray(double arr[], size_t n, double x) {
-	bool isReplace = false;
-	for (size_t i = 0; i < n; ++i)
-	{
-		if (isReplace) {
-			arr[i] = x;
-		}
-		else if (arr[i] == double(1)) {
-			isReplace = true;
-		}
-	}
-
-};
 
 int main()
 {
-	// размер массива равен 20 (по заданию) 
-	const size_t N = 20;
-
-	double a[N] = { 0.0 }; // создаем массив и инициализируем нулями 
-	double input;
-
-	// инициализация генератора случайных чисел 
-	srand(0);
-
-	// поиск максимального значения в массиве а, изменение массива a 
-	double max = processArray(a, N);
-	// вывод на экран 
-	printf("max Item = %g\n\n", max);
-	printArray(a, N);
-
-	std::cout << "Введите число: ";
-	std::cin >> input;
-
-	replaceItemsArray(a, N, input);
-	printArray(a, N);
-
+	//task1();
+	task2();
 	return 0;
 }
 

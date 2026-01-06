@@ -1,0 +1,100 @@
+# Игнорируем во ВСЕХ папках:
+**/[Dd]ebug/
+**/[Rr]elease/
+**/[Bb]uild/
+**/[Oo]bj/
+**/[Bb]in/
+**/x64/
+**/x86/
+**/.vs/
+**/.vscode/
+**/.idea/
+
+# ============================================
+# ФАЙЛЫ СБОРКИ (в любой папке)
+# ============================================
+
+# Исполняемые файлы (во всех подпапках)
+**/*.exe
+**/*.out
+**/*.app
+
+# Объектные файлы
+**/*.o
+**/*.obj
+
+# Библиотеки
+**/*.a
+**/*.lib
+**/*.dll
+**/*.so
+**/*.dylib
+
+# Файлы отладки
+**/*.pdb
+**/*.idb
+**/*.ilk
+**/*.db
+
+# CMake файлы
+**/CMakeFiles/
+**/CMakeCache.txt
+**/cmake_install.cmake
+**/Makefile
+**/compile_commands.json
+
+# ============================================
+# IDE И СИСТЕМНЫЕ ФАЙЛЫ
+# ============================================
+
+# Visual Studio
+**/.vs/
+**/*.vcxproj
+**/*.vcxproj.filters
+**/*.vcxproj.user
+**/*.sdf
+**/*.opensdf
+**/*.suo
+**/ipch/
+
+# Visual Studio Code
+**/.vscode/
+# Но оставляем настройки, если они нужны
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# CLion
+**/.idea/
+**/*.iml
+
+# Code::Blocks
+**/*.depend
+**/*.layout
+**/*.cbp
+**/*.workspace
+
+# Временные и системные файлы
+**/*.swp
+**/*.swo
+**/*~
+**/*.tmp
+**/*.temp
+**/*.bak
+**/*.backup
+**/.DS_Store
+**/Thumbs.db
+
+
+# Примеры входных/выходных данных (если генерируются)
+**/input*.txt
+**/output*.txt
+**/test*.txt
+**/result*.txt
+
+# Отчёты в разных форматах (если генерируются)
+**/*.pdf
+**/*.docx
+**/*.doc
+**/*.rtf
