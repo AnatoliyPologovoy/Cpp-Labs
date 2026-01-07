@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstring>
 #include <string>
-#include "Vector.h"  // подключаем наш заголовочный файл
+#include "Vector.h"
 using namespace std;
 
 Vector::Vector() : data(nullptr), size(0) {
@@ -15,8 +15,13 @@ Vector::Vector(size_t s) {
 
 };
 
+// Перегрузка оператора []
+int& Vector::operator[](size_t index) {
+    return data[index];
+}
+
 //Заполнение массива элементами из нечетных строк двумерного массива
-void Vector::setByOddRows2DArr(int** array2D, size_t rows, size_t cols) {
+void Vector::setByOddRows2DArr(const int* const* array2D, size_t rows, size_t cols) {
     //считаем кол-во нечетных строк
     size_t oddRowsCount = 0;
     for (size_t i = 1; i <= rows; i++) {
