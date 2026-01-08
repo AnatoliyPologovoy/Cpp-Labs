@@ -1,37 +1,38 @@
-// main.cpp
+ï»¿// main.cpp
 #include <iostream>
 #include "Vector.h"
 #include "Matrix.h" 
+#include "Fraction.h"
 #include <windows.h>
 using namespace std;
 
 void task1() {
-    cout << "=== ÄÅÌÎÍÑÒÐÀÖÈß ÐÀÁÎÒÛ ÇÀÄÀÍÈß 1 (Âàðèàíò 2) ===" << endl;
+    cout << "=== Ð”Ð•ÐœÐžÐÐ¡Ð¢Ð ÐÐ¦Ð˜Ð¯ Ð ÐÐ‘ÐžÐ¢Ð« Ð—ÐÐ”ÐÐÐ˜Ð¯ 1 (Ð’Ð°Ñ€Ð¸Ð°Ð½Ñ‚ 2) ===" << endl;
     cout << "=========================================" << endl << endl;
 
-    // Òåñòîâûå äàííûå
+    // Ð¢ÐµÑÑ‚Ð¾Ð²Ñ‹Ðµ Ð´Ð°Ð½Ð½Ñ‹Ðµ
     const size_t ROWS = 5;
     const size_t COLS = 5;
 
-    cout << "1. Ñîçäà¸ì äâóìåðíûé ìàññèâ " << ROWS << "x" << COLS << endl;
+    cout << "1. Ð¡Ð¾Ð·Ð´Ð°Ñ‘Ð¼ Ð´Ð²ÑƒÐ¼ÐµÑ€Ð½Ñ‹Ð¹ Ð¼Ð°ÑÑÐ¸Ð² " << ROWS << "x" << COLS << endl;
     Matrix matrix(ROWS, COLS);
-    matrix.setArrayFactorials(); //Çàïîëíÿåì ôàêòîðèàëàìè
+    matrix.setArrayFactorials(); //Ð—Ð°Ð¿Ð¾Ð»Ð½ÑÐµÐ¼ Ñ„Ð°ÐºÑ‚Ð¾Ñ€Ð¸Ð°Ð»Ð°Ð¼Ð¸
     matrix.print();
 
-    cout << "\n2. Ñîçäà¸ì ïóñòîé âåêòîð, ïîòîì çàïîëíÿåì ýëåìåíòàìè èç 2D ìàññèâà:" << endl;
+    cout << "\n2. Ð¡Ð¾Ð·Ð´Ð°Ñ‘Ð¼ Ð¿ÑƒÑÑ‚Ð¾Ð¹ Ð²ÐµÐºÑ‚Ð¾Ñ€, Ð¿Ð¾Ñ‚Ð¾Ð¼ Ð·Ð°Ð¿Ð¾Ð»Ð½ÑÐµÐ¼ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð°Ð¼Ð¸ Ð¸Ð· 2D Ð¼Ð°ÑÑÐ¸Ð²Ð°:" << endl;
     cout << "--------------------------------------" << endl;
 
-    // 2 Ñîçäà¸ì ïóñòîé âåêòîð, ïîòîì çàïîëíÿåì èç 2D ìàññèâà
+    // 2 Ð¡Ð¾Ð·Ð´Ð°Ñ‘Ð¼ Ð¿ÑƒÑÑ‚Ð¾Ð¹ Ð²ÐµÐºÑ‚Ð¾Ñ€, Ð¿Ð¾Ñ‚Ð¾Ð¼ Ð·Ð°Ð¿Ð¾Ð»Ð½ÑÐµÐ¼ Ð¸Ð· 2D Ð¼Ð°ÑÑÐ¸Ð²Ð°
     Vector vector;
-    cout << "   Äî çàïîëíåíèÿ: ";
+    cout << "   Ð”Ð¾ Ð·Ð°Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ñ: ";
     vector.print();
     vector.setByOddRows2DArr(matrix.getData(), matrix.getRows(), matrix.getCols());
 
-    cout << "   Ïîñëå çàïîëíåíèÿ èç íå÷¸òíûõ ñòðîê: ";
+    cout << "   ÐŸÐ¾ÑÐ»Ðµ Ð·Ð°Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¸Ñ Ð¸Ð· Ð½ÐµÑ‡Ñ‘Ñ‚Ð½Ñ‹Ñ… ÑÑ‚Ñ€Ð¾Ðº: ";
     vector.print();
 
 
-    cout << "\n3.Òåñòû at() è setAt()\n\n";
+    cout << "\n3.Ð¢ÐµÑÑ‚Ñ‹ at() Ð¸ setAt()\n\n";
 
     Matrix m(2, 2);
 
@@ -40,16 +41,19 @@ void task1() {
     m.setAt(1, 0, 30);
     m.setAt(1, 1, 40);
 
-    cout << "Ìàòðèöà ïîñëå setAt:\n";
+    cout << "ÐœÐ°Ñ‚Ñ€Ð¸Ñ†Ð° Ð¿Ð¾ÑÐ»Ðµ setAt:\n";
     m.print();
     cout << "\nm.at(1,0) = " << m.at(1, 0);
 
 }
 
 int main() {
-    SetConsoleOutputCP(1251);  // Windows-1251 äëÿ ðóññêîãî
+    SetConsoleOutputCP(1251);  // Windows-1251 Ð´Ð»Ñ Ñ€ÑƒÑÑÐºÐ¾Ð³Ð¾
 
-    task1();
+    //task1();
+    // 
+    //Ð”ÐµÐ¼Ð¾Ð½ÑÑ‚Ñ€Ð°Ñ†Ð¸Ñ ÐºÐ»Ð°ÑÑÐ° Fraction (Ð·Ð°Ð´Ð°Ð½Ð¸Ðµ 2)
+    demonstrateFractionClass();
         
     return 0;
 }

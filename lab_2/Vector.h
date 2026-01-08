@@ -1,4 +1,3 @@
-// Vector.h
 #ifndef VECTOR_H  // защита от повторного включения
 #define VECTOR_H
 
