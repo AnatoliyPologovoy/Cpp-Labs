@@ -4,6 +4,7 @@
 #include "Matrix.h" 
 #include "Fraction.h"
 #include <windows.h>
+#include "Shop.h"
 using namespace std;
 
 void task1() {
@@ -50,10 +51,13 @@ void task1() {
 int main() {
     SetConsoleOutputCP(1251);  // Windows-1251 для русского
 
-    //task1();
+    task1(); //Демонстрация задания 1
     // 
     //Демонстрация класса Fraction (задание 2)
-    demonstrateFractionClass();
+    //demonstrateFractionClass();
+
+    //Демонстрация класса Shop (задание 3)
+    //demonstrateShopClass();
         
     return 0;
 }
